@@ -52,7 +52,7 @@ FeatureScatter(pbmc3k, feature1 = "nCount_RNA", feature2 = "pct.mt") +
   FeatureScatter(pbmc3k, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
 ```
 
-![](graph\QC.pbmc3k.png)
+<img src="graph\QC.pbmc3k.png"/>
 
 ```R
 pbmc3k <- subset(pbmc3k, subset = nFeature_RNA > 200 & nFeature_RNA < 2500 & pct.mt < 5)
@@ -77,7 +77,7 @@ FeatureScatter(pbmc4k, feature1 = "nCount_RNA", feature2 = "pct.mt") +
   FeatureScatter(pbmc4k, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
 ```
 
-![](graph\QC.pbmc4k.png)
+<img src="graph\QC.pbmc4k.png"/>
 
 ```R
 pbmc4k <- subset(pbmc4k, subset = nFeature_RNA > 200 & nFeature_RNA < 3500 & pct.mt < 8)
@@ -189,7 +189,7 @@ FeaturePlot(pbmc3k, c("MS4A1", "GNLY", "CD3E",
                       "LYZ", "PPBP", "CD8A"), order = T)
 ```
 
-![](graph\feature.pbmc3k.png)
+<img src="graph\feature.pbmc3k.png"/>
 
 ### 6. Assign cell types
 
@@ -216,7 +216,7 @@ pbmc3k <- RenameIdents(pbmc3k, new.cluster.ids)
 DimPlot(pbmc3k, label = T) + NoLegend()
 ```
 
-![](graph\celltype.pbmc3k.png)
+<img src="graph\celltype.pbmc3k.png"/>
 
 ### 7. Project single-cell RNA-seq data to given LSI
 
@@ -279,7 +279,7 @@ FeaturePlot(pbmc4k, c("MS4A1", "GNLY", "CD3E",
                       "LYZ", "PPBP", "CD8A"), order = T)
 ```
 
-![](graph\feature.pbmc4k.png)
+<img src="graph\feature.pbmc4k.png"/>
 
 ```R
 new.cluster.ids <- c("Naive CD4 T", "CD14+ Mono", "B", "Memory CD4 T",
@@ -290,7 +290,7 @@ pbmc4k <- RenameIdents(pbmc4k, new.cluster.ids)
 DimPlot(pbmc4k, label = T) + NoLegend()
 ```
 
-![](graph\celltype.pbmc4k.png)
+<img src="graph\celltype.pbmc4k.png"/>
 
 We can merge `pbmc3k` and `pbmc4k` together simply.
 
@@ -305,7 +305,7 @@ pbmc7k[["umap"]] <- CreateDimReducObject(
 DimPlot(pbmc7k, label = T) + NoLegend()
 ```
 
-![](graph\celltype.pbmc7k.png)
+<img src="graph\celltype.pbmc7k.png"/>
 
 ```R
 pbmc7k$celltype <- Idents(pbmc7k)
@@ -314,7 +314,7 @@ Idents(pbmc7k) <- pbmc7k$orig.ident
 DimPlot(pbmc7k)
 ```
 
-![](graph\source.pbmc7k.png)
+<img src="graph\source.pbmc7k.png"/>
 
 We can see that the cells from `pbmc4k` locate on the UMAP space according to the `pbmc3k` cells of the same cell type.
 
@@ -364,7 +364,7 @@ psudo.so[["umap"]] <- CreateDimReducObject(
 DimPlot(psudo.so, label = T)
 ```
 
-![](graph\celltype.bulk.png)
+<img src="graph\celltype.bulk.png"/>
 
 ```R
 pbmc.mix <- merge(pbmc3k, psudo.so)
@@ -377,7 +377,7 @@ pbmc.mix[["umap"]] <- CreateDimReducObject(
 DimPlot(pbmc.mix, label = T) + NoLegend()
 ```
 
-![](graph\celltype.mix.png)
+<img src="graph\celltype.mix.png"/>
 
 However, the CD8T cell bulk sample doesn't match single-cell data while others perform good. This will be improved in the future.
 
