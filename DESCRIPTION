@@ -1,0 +1,19 @@
+Package: projectLSI
+Type: Package
+Title: Project bulk/single-cell RNA-seq data to given LSI space
+Version: 0.1.0
+Date: 2020-5-25
+Author: Yulin Lyu
+Maintainer: Yulin Lyu <lvyl@pku.edu.cn>
+Description: Project bulk/single-cell RNA-seq data to given LSI space.
+    The methods are learned from the article Granja, J.M., Klemm, S., McGinnis, L.M. et al.
+    Single-cell multiomic analysis identifies regulatory programs in mixed-phenotype acute leukemia.
+    Nat Biotechnol 37, 1458–1465 (2019).
+    More features will be added in future.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    Matrix,
+    irlba
+RoxygenNote: 6.1.1
