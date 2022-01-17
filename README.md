@@ -2,9 +2,9 @@
 
 **Project bulk/single-cell RNA-seq data to given LSI space.**
 
-The methods are learned from the article [Granja, J.M., Klemm, S., McGinnis, L.M. *et al*. Single-cell multiomic analysis identifies regulatory programs in mixed-phenotype acute leukemia. *Nat Biotechnol* 37, 1458–1465 (2019)](https://www.nature.com/articles/s41587-019-0332-7) and [the code of this paper available](https://github.com/GreenleafLab/MPAL-Single-Cell-2019).
+The methods are implemented according to the article [Granja, J.M., Klemm, S., McGinnis, L.M. *et al*. Single-cell multiomic analysis identifies regulatory programs in mixed-phenotype acute leukemia. *Nat Biotechnol* 37, 1458–1465 (2019)](https://www.nature.com/articles/s41587-019-0332-7) and [the code of this paper available](https://github.com/GreenleafLab/MPAL-Single-Cell-2019).
 
-More features will be added in future. *(etc. supporting for ATAC-seq)*
+More features may be added in future. *(etc. supporting for ATAC-seq)*
 
 ## Installation
 
@@ -14,7 +14,7 @@ devtools::install_github("sajuukLyu/projectLSI")
 
 ## Quick Start
 
-Next, let's try to project a single-cell RNA-seq dataset `pbmc4k` and a bulk RNA-seq dataset `bulk.data` into the same single-cell RNA-seq dataset `pbmc3k`, keeping the original UMAP coordinate **unchanged**.
+Next, let's try to project a single-cell RNA-seq dataset `pbmc4k` and a bulk RNA-seq dataset `bulk.data` into the same single-cell RNA-seq dataset `pbmc3k`, keeping the original LSI & UMAP coordinate **unchanged**.
 
 ### 1. Load data
 
@@ -379,5 +379,5 @@ DimPlot(pbmc.mix, label = T) + NoLegend()
 
 <img src="graph\celltype.mix.png"/>
 
-However, the CD8T cell bulk sample doesn't match single-cell data while others perform good. This will be improved in the future.
+However, the CD8T cell bulk sample doesn't match single-cell data while others look good.
 
